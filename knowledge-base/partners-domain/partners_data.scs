@@ -1,0 +1,51 @@
+concept_company
+<- sc_node_class;
+=> nrel_main_idtf: [компания] (* <- lang_ru;; *);;
+
+concept_partner
+<- sc_node_class;
+=> nrel_main_idtf: [партнёр] (* <- lang_ru;; *);;
+
+nrel_partner
+<- sc_node_non_role_relation;
+=> nrel_main_idtf: [быть партнёром*] (* <- lang_ru;; *);
+=> nrel_first_domain: concept_company;
+=> nrel_second_domain: concept_partner;;
+
+action_find_intersection
+<- sc_node_class;
+=> nrel_main_idtf: [действие: найти общих партнёров] (* <- lang_ru;; *);
+<= nrel_inclusion: concept_information_action;;
+
+action_find_union
+<- sc_node_class;
+=> nrel_main_idtf: [действие: объединить сети партнёров] (* <- lang_ru;; *);
+<= nrel_inclusion: concept_information_action;;
+
+company_Alpha
+<- concept_company;
+=> nrel_main_idtf: [Компания Альфа] (* <- lang_ru;; *);;
+
+company_Beta
+<- concept_company;
+=> nrel_main_idtf: [Компания Бета] (* <- lang_ru;; *);;
+
+partner_Google
+<- concept_partner;
+=> nrel_main_idtf: [Google] (* <- lang_en;; *);;
+
+partner_Microsoft
+<- concept_partner;
+=> nrel_main_idtf: [Microsoft] (* <- lang_en;; *);;
+
+partner_Yandex
+<- concept_partner;
+=> nrel_main_idtf: [Yandex] (* <- lang_en;; *);;
+
+partner_Tesla
+<- concept_partner;
+=> nrel_main_idtf: [Tesla] (* <- lang_en;; *);;
+
+company_Alpha => nrel_partner: partner_Google; partner_Microsoft; partner_Yandex;;
+
+company_Beta => nrel_partner: partner_Microsoft; partner_Yandex; partner_Tesla;;Й

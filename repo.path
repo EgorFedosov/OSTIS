@@ -1,0 +1,10 @@
+# components
+knowledge-base/
+!knowledge-base/ims.ostis.kb/ui/menu/ui_main_menu.scs
+
+# specifications
+problem-solver/cxx/example-module/specifications/agent_of_isomorphic_search
+problem-solver/cxx/example-module/specifications/agent_of_subdividing_search
+
+knowledge-base/react_domain
+knowledge-base/partners-domain/

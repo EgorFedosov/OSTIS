@@ -1,0 +1,4 @@
+concept_functional_component
+<- sc_node_class;
+=> nrel_main_idtf: [функциональный компонент] (* <- lang_ru;; *);
+<= nrel_inclusion: concept_component;;

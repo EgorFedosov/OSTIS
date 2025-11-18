@@ -1,0 +1,44 @@
+@template_find_hook_names_from_app = {
+    rrel_init_template: {
+        rrel_template: [*
+            @input_param1 = (.._app <-_ concept_application);;
+            rrel_root_component _-> (.._app _-> .._component);;
+            @output_param1 = (.._component <-_ concept_functional_component);;
+        *];
+        rrel_template_input_params: {
+            @input_param1
+        };
+        rrel_template_output_params: {
+            @output_param1
+        }
+    } (* <- nrel_search_set_template;; *);
+    rrel_next_template: {
+        rrel_init_template: {
+            rrel_template: [*
+                @input_param1 = (.._component <-_ concept_functional_component);;
+                nrel_uses_hook _-> (.._component _=> .._hook);;
+                @output_param1 = (.._hook <-_ concept_hook);;
+            *];
+            rrel_template_input_params: {
+                @input_param1
+            };
+            rrel_template_output_params: {
+                @output_param1
+            }
+        } (* <- nrel_search_set_template;; *);
+        rrel_next_template: {
+            rrel_init_template: {
+                rrel_template: [*
+                    @input_param1 = (.._hook <-_ concept_hook);;
+                    nrel_hook_name _-> (.._hook _=> .._hook_name);;
+                *];
+                rrel_template_input_params: {
+                    @input_param1
+                }
+            } (* <- nrel_search_template;; *)
+        } (* <- nrel_fixed_search_strategy_template;; *)
+    } (* <- nrel_fixed_search_strategy_template;; *)
+};;
+@template_find_hook_names_from_app
+<- nrel_fixed_search_strategy_template;
+=> nrel_main_idtf: [Шаблон поиска имен хуков корневых компонентов] (* <- lang_ru;; *);; 

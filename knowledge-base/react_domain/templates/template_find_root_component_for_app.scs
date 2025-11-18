@@ -1,0 +1,18 @@
+@template_find_root_component_for_app = {
+    rrel_init_template: {
+        rrel_template: [*
+        @input_param1 = (.._app <-_ concept_application);;
+        rrel_root_component _-> (.._app _-> .._component);;
+        @output_param1 = (.._component <-_ concept_functional_component);;
+        *];
+        rrel_template_input_params: {
+            @input_param1
+            };
+            rrel_template_output_params: {
+                @output_param1
+                }
+    } (* <- nrel_search_set_template;; *)
+};;
+@template_find_root_component_for_app
+<- nrel_fixed_search_strategy_template;
+=> nrel_main_idtf: [Шаблон поиска корневого компонента для приложения] (* <- lang_ru;; *);;

@@ -1,0 +1,20 @@
+MyReactApp
+<- concept_application;
+=> nrel_main_idtf: [Мое React Приложение] (* <- lang_ru;; *);
+-> rrel_root_component:
+AppComponent;;
+
+AppComponent
+<- concept_functional_component;
+=> nrel_main_idtf: [AppComponent] (* <- lang_ru;; *);
+=> nrel_uses_hook:
+hook_useState;
+hook_useEffect;;
+
+hook_useState
+<- concept_hook;
+=> nrel_hook_name: [useState] (* <- lang_ru;; *);;
+
+hook_useEffect
+<- concept_hook;
+=> nrel_hook_name: [useEffect] (* <- lang_ru;; *);;

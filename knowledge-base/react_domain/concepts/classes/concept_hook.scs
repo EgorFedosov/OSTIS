@@ -1,0 +1,4 @@
+concept_hook
+<- sc_node_class;
+=> nrel_main_idtf: [Хук] (* <- lang_ru;; *);
+<= nrel_inclusion: concept_function;;

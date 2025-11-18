@@ -1,0 +1,5 @@
+rrel_root_component
+<- sc_node_role_relation;
+=> nrel_main_idtf: [корневой компонент'] (* <- lang_ru;; *);
+=> nrel_first_domain: concept_application;
+=> nrel_second_domain: concept_functional_component;;

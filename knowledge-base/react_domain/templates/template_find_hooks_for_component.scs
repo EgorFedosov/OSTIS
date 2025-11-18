@@ -1,0 +1,18 @@
+@template_find_hooks_for_component = {
+    rrel_init_template: {
+        rrel_template: [*
+        @input_param1 = (.._component <-_ concept_functional_component);;
+        nrel_uses_hook _-> (.._component _=> .._hook);;
+        @output_param1 = (.._hook <-_ concept_hook);;
+        *];
+        rrel_template_input_params: {
+            @input_param1
+        };
+        rrel_template_output_params: {
+            @output_param1
+            }
+            } (* <- nrel_search_set_template;; *)
+};;
+@template_find_hooks_for_component
+<- nrel_fixed_search_strategy_template;
+=> nrel_main_idtf: [Шаблон поиска хуков для компонента] (* <- lang_ru;; *);;

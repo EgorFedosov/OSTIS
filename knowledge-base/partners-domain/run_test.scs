@@ -1,0 +1,14 @@
+
+test_action_intersection
+    <- action_find_intersection; 
+    <- question_initiated;     
+    -> rrel_1: company_Alpha;   
+    -> rrel_2: company_Beta
+;; 
+
+test_action_union
+    <- action_find_union;
+    <- question_initiated;
+    -> rrel_1: company_Alpha;
+    -> rrel_2: company_Beta
+;;
