@@ -48,4 +48,4 @@ partner_Tesla
 
 company_Alpha => nrel_partner: partner_Google; partner_Microsoft; partner_Yandex;;
 
-company_Beta => nrel_partner: partner_Microsoft; partner_Yandex; partner_Tesla;;Й
+company_Beta => nrel_partner: partner_Microsoft; partner_Yandex; partner_Tesla;;
